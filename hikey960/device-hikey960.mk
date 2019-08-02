@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.display.600p=true
+
 PRODUCT_COPY_FILES +=	$(TARGET_PREBUILT_KERNEL):kernel \
 			$(TARGET_PREBUILT_DTB):hi3660-hikey960.dtb
 
@@ -39,6 +41,8 @@ PRODUCT_PACKAGES += gralloc.hikey960
 PRODUCT_PACKAGES += power.hikey960
 
 PRODUCT_PACKAGES += sensors.hikey960
+
+
 
 # Include vendor binaries
 $(call inherit-product-if-exists, vendor/linaro/hikey960/device-vendor.mk)
